@@ -1,0 +1,54 @@
+.product-new {
+    grid-area: new;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "new-1 new-2 new-3 new-4";
+    grid-gap: 10px;
+
+    .new-1 {
+      grid-area: new-1;
+      background: url("/images/bottom-product-1.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      transition: margin 1s ease-in;
+    }
+
+    .new-2 {
+      grid-area: new-2;
+      background: url("/images/bottom-product-2.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      transition: margin 1s ease-in;
+    }
+
+    .new-3 {
+      grid-area: new-3;
+      background: url("/images/bottom-product-3.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      transition: margin 1s ease-in;
+    }
+
+    .new-4 {
+      grid-area: new-4;
+      background: url("/images/bottom-product-4.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      transition: margin 1s ease-in;
+    }
+
+     .new-1:hover, .new-2:hover, .new-3:hover, .new-4:hover{
+      margin: -5px;
+        box-shadow: 3px 5px 5px rgba($color: #000000, $alpha: 0.3);
+        cursor: pointer;
+     }
+
+  }

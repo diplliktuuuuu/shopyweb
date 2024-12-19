@@ -9,8 +9,57 @@ html {
 }
 
 .container {
-    //Mos u lodh. Mos u be nervoz. Gjithcka do te rregullohet.
-    //Normalisht pasi qe e shton kodin !!!!
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 80px repeat(2, 1fr) 2fr;
+  grid-template-columns: 200px repeat(4, 1fr);
+  grid-template-areas: "sidebar header header header header"
+    "sidebar sales sales sales sales"
+    "sidebar sales sales sales sales"
+    "sidebar new new new new";
+  grid-gap: 10px;
+
+  
+  .sidebar {
+    grid-area: sidebar;
+  
+  #logo{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800px;
+    color: $logo-color;
+    text-decoration: underline;
+    margin: 10px auto;
+  }
+
+  .navbar{
+    margin: 20px;
+
+    h4{
+      font-size: 20px;
+    }
+    .section{
+      display: flex;
+      align-items: center;
+      margin: 5px;
+      padding: 8px 5px;
+      border-radius: 10px;
+
+      span{
+        margin-left: 3px;
+        font-size: 18px;
+      }
+    }
+    .section{
+      background-color: $gray-color;
+      cursor: pointer;
+    }
+  }
+  
+  }
+ h3{
+  margin: 500px auto 20px  auto;
+ }
 }
 
 @media screen and (max-width: 992px) {

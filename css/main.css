@@ -1,5 +1,195 @@
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .gender {
+  display: flex;
+}
+.header .gender .female, .header .gender .male {
+  padding: 10px 20px;
+  background-color: #e6e6e6;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.header .gender .female:hover {
+  background-color: #ffd6d7;
+  cursor: pointer;
+}
+.header .gender .male:hover {
+  background-color: #bde8f0;
+  cursor: pointer;
+}
+.header .search {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid gray;
+}
+.header input {
+  width: 250px;
+  font-size: 20px;
+  border: none;
+}
+.header input:focus {
+  outline: none;
+}
+.header .icons {
+  margin: 10px;
+}
+.header .icons img {
+  margin: 5px;
+}
+
+.product-sales {
+  grid-area: sales;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "horizontal-1 horizontal-1 vertical-1 vertical-2" "horizontal-2 horizontal-2 vertical-1 vertical-2";
+  grid-gap: 10px;
+}
+.product-sales .horizontal-1 {
+  grid-area: horizontal-1;
+  background: url("/images/horizontal-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: margin 1s ease-in;
+}
+.product-sales .horizontal-2 {
+  grid-area: horizontal-2;
+  background: url("/images/horizontal-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: margin 1s ease-in;
+}
+.product-sales .vertical-1 {
+  grid-area: vertical-1;
+  background: url("/images/vertical-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: margin 1s ease-in;
+}
+.product-sales .vertical-2 {
+  grid-area: vertical-2;
+  background: url("/images/vertical-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: margin 1s ease-in;
+}
+.product-sales .horizontal-1:hover, .product-sales .horizontal-2:hover, .product-sales .vertical-1:hover, .product-sales .vertical-2:hover {
+  margin: -5px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.product-new {
+  grid-area: new;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "new-1 new-2 new-3 new-4";
+  grid-gap: 10px;
+}
+.product-new .new-1 {
+  grid-area: new-1;
+  background: url("/images/bottom-product-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: margin 1s ease-in;
+}
+.product-new .new-2 {
+  grid-area: new-2;
+  background: url("/images/bottom-product-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: margin 1s ease-in;
+}
+.product-new .new-3 {
+  grid-area: new-3;
+  background: url("/images/bottom-product-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: margin 1s ease-in;
+}
+.product-new .new-4 {
+  grid-area: new-4;
+  background: url("/images/bottom-product-4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: margin 1s ease-in;
+}
+.product-new .new-1:hover, .product-new .new-2:hover, .product-new .new-3:hover, .product-new .new-4:hover {
+  margin: -5px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
 html {
   box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 80px repeat(2, 1fr) 2fr;
+  grid-template-columns: 200px repeat(4, 1fr);
+  grid-template-areas: "sidebar header header header header" "sidebar sales sales sales sales" "sidebar sales sales sales sales" "sidebar new new new new";
+  grid-gap: 10px;
+}
+.container .sidebar {
+  grid-area: sidebar;
+}
+.container .sidebar #logo {
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800px;
+  color: #961818;
+  text-decoration: underline;
+  margin: 10px auto;
+}
+.container .sidebar .navbar {
+  margin: 20px;
+}
+.container .sidebar .navbar h4 {
+  font-size: 20px;
+}
+.container .sidebar .navbar .section {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  padding: 8px 5px;
+  border-radius: 10px;
+}
+.container .sidebar .navbar .section span {
+  margin-left: 3px;
+  font-size: 18px;
+}
+.container .sidebar .navbar .section {
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+.container h3 {
+  margin: 500px auto 20px auto;
 }
 
 @media screen and (max-width: 992px) {
